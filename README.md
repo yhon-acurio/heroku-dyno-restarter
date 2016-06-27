@@ -40,6 +40,6 @@ rails s
 
 #Deployment
 ```
-git remote add heroku https://git.heroku.com/sockets-io.git
+git remote add heroku https://git.heroku.com/viasocket-restarter.git
 git push heroku
 ```
