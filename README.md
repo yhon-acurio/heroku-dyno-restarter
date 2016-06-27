@@ -1,3 +1,9 @@
+#What is it
+A simple microservice app that can restart Sidekiq workers of given Heroku application. Expected usage is this:
+* set up a webhook for target application via Heroku logging plugin like Papertrail. This webhook should be run when
+the target app notices that sidekiq has stuck, and request `https://viasocket-restarter.herokuapp.com/api/restart_workers?key=restart-api-key`
+to restart it. This is implemented as a separate service to be alive when the target app's Sidekiq stucks.
+
 #Local installation
 * Create a dir for viasocket development instances:
 ```
