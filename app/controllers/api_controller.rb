@@ -5,7 +5,7 @@ class ApiController < ApplicationController
   def restart
     kind = params[:kind] || 'worker'
     RestartAppJob.perform_later(kind)
-    render plain: "Restart triggered for #{kind} dynos of #{ENV['APP_NAME']} app"
+    render plain: "Restart triggered for #{kind} dynos of #{DynoService.target_app_name} app"
   end
 
   private

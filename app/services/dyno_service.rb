@@ -13,7 +13,7 @@ class DynoService
   end
 
   def dynos
-    result = connection.dyno.list(ENV['APP_NAME']).map do |dyno_info|
+    result = connection.dyno.list(target_app_name).map do |dyno_info|
       Dyno.new(dyno_info, self) if dyno_info['type'] == @kind
     end.compact
     Rails.logger.debug("DynoService dynos: #{result.inspect}")
@@ -24,5 +24,13 @@ class DynoService
     result = dynos.select(&:up?)
     Rails.logger.debug("DynoService running_dynos: #{result.inspect}")
     result
+  end
+
+  def target_app_name
+    self.class.target_app_name
+  end
+
+  def self.target_app_name
+    ENV['APP_NAME']
   end
 end
