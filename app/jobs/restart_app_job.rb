@@ -9,7 +9,7 @@ class RestartAppJob < ApplicationJob
     if service.connection
       service.running_dynos.each do |dyno|
         if dyno.restart!
-          Rails.logger.debug("done restarting #{dyno.type} dyno of #{service.target_app_name}: #{dyno.inspect}")
+          Rails.logger.info("done restarting #{dyno.type} dyno of #{service.target_app_name}: #{dyno.inspect}")
         end
       end
     end
