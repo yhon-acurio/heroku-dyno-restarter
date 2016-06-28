@@ -1,11 +1,15 @@
 class ApiController < ApplicationController
 
-  before_action :check_key
+  before_action :check_key, only: :restart
 
   def restart
     kind = params[:kind] || 'worker'
     RestartAppJob.perform_later(kind)
     render plain: "Restart triggered for #{kind} dynos of #{DynoService.target_app_name} app"
+  end
+
+  def monitor
+    render plain: 'ok'
   end
 
   private
