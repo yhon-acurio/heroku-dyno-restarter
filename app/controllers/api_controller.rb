@@ -1,11 +1,17 @@
 class ApiController < ApplicationController
 
-  def restart_workers
-    if params[:key] == ENV['RESTART_WEBHOOK_KEY']
-      RestartAppJob.perform_later
-      render text: 'Restart triggered'
-    else
-      render text: 'You are not allowed to restart the dynos'
-    end
+  before_action :check_key
+
+  def restart
+    kind = params[:kind] || 'worker'
+    RestartAppJob.perform_later(kind)
+    render plain: "Restart triggered for #{kind} dynos of #{ENV['APP_NAME']} app"
   end
+
+  private
+
+  def check_key
+    render plain: 'You are not allowed to restart the dynos' unless params[:key] == ENV['RESTART_WEBHOOK_KEY']
+  end
+
 end
