@@ -17,7 +17,7 @@ To obtain the OAuth key do this:
 
 * set up a Heroku user account that basically has access only to target application - this env key will be visible to
 everyone who has to the restarter app and you might not want to give them ability to restart other apps.
-* get the OAuth key of that user via that user's "Account settings" page at Heroku
+* get the OAuth key of that user via that user's "Account settings" page at Heroku, 'API Key' field
 * put that key to RESTART_API_KEY env var of the restarter app
 
 See also .env.example for other configuration keys.
