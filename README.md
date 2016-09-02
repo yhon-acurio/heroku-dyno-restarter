@@ -5,7 +5,7 @@ A simple microservice app that can restart dynos of given Heroku application. Ex
 
 * set up a webhook for target application via Heroku logging plugin like Papertrail.
 * This webhook should be run when the target app notices that sidekiq has stuck, and request
-`https://my-heroku-dyno-restarter.herokuapp.com/api/restart_workers?key=restart-webhook-key&kind=web`
+`https://my-heroku-dyno-restarter.herokuapp.com/api/restart?key=restart-webhook-key&kind=web`
 to restart it. 'kind' parameter here must match the process kind key at target app's Procfile, default is 'worker'.
 
 This is implemented as a separate service to be alive when the target app feels bad and e.g. its Sidekiq queue stucks
