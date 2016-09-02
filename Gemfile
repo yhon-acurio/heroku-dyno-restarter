@@ -36,7 +36,6 @@ end
 
 group :production do
   gem 'sidekiq'
-  gem 'sinatra', require: false # for Sidekiq UI
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
