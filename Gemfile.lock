@@ -148,8 +148,8 @@ DEPENDENCIES
   dotenv-rails
   newrelic_rpm
   platform-api
-  puma (~> 3.0)
-  rails (>= 5.0.0.rc2, < 5.1)
+  puma
+  rails (~> 5.0.0.1)
   sidekiq
   spring
   spring-watcher-listen
