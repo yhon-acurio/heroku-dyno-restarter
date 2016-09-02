@@ -45,6 +45,6 @@ git push heroku
 
 © Artem Vasiliev 2016
 
-Based on https://www.stormconsultancy.co.uk/blog/development/ruby-on-rails/automatically-restart-struggling-heroku-dynos-using-logentries/
+Based on [this blog post](https://www.stormconsultancy.co.uk/blog/development/ruby-on-rails/automatically-restart-struggling-heroku-dynos-using-logentries/).
 
 Initially developed for the [Socket](https://viasocket.com) project of [Walkover](https://www.walkover.in) team, they rock!
