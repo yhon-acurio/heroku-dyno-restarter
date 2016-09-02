@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/artemv/heroku-dyno-restarter/badges/gpa.svg)](https://codeclimate.com/github/artemv/heroku-dyno-restarter)
 [![Dependency Status](https://gemnasium.com/badges/github.com/artemv/heroku-dyno-restarter.svg)](https://gemnasium.com/github.com/artemv/heroku-dyno-restarter)
 
 ## What is it
