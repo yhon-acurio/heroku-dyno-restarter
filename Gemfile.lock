@@ -75,7 +75,7 @@ GEM
     moneta (0.8.0)
     multi_json (1.12.1)
     netrc (0.11.0)
-    newrelic_rpm (3.16.0.318)
+    newrelic_rpm (3.16.2.321)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -119,8 +119,6 @@ GEM
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       redis (~> 3.2, >= 3.2.1)
-    sinatra (1.0)
-      rack (>= 1.0)
     spring (1.7.2)
     spring-watcher-listen (2.0.0)
       listen (>= 2.7, < 4.0)
@@ -152,7 +150,6 @@ DEPENDENCIES
   puma (~> 3.0)
   rails (>= 5.0.0.rc2, < 5.1)
   sidekiq
-  sinatra
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
