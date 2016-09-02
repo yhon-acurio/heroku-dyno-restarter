@@ -1,4 +1,4 @@
-##What is it
+## What is it
 A simple microservice app that can restart dynos of given Heroku application. Expected usage is this:
 
 * set up a webhook for target application via Heroku logging plugin like Papertrail.
@@ -9,7 +9,7 @@ to restart it.
 This is implemented as a separate service to be alive when the target app feels bad and e.g. its Sidekiq queue stucks
 for some reason.
 
-##Target app access key
+## Target app access key
 This app needs Heroku OAuth key to be able to restart target app, this is set via RESTART_API_KEY env var.
 To obtain the OAuth key do this:
 
@@ -20,8 +20,8 @@ everyone who has to the restarter app and you might not want to give them abilit
 
 See also .env.example for other configuration keys.
 
-##Local installation
-```
+## Local installation
+
 * Clone the master repo: `git clone https://github.com/artemv/heroku-dyno-restarter.git && cd heroku-dyno-restarter`
 * Copy .env.example file to .env and change values as appropriate for your local env
 * Install Ruby 2.3.1 from https://www.ruby-lang.org/en/downloads/ or via RVM (https://rvm.io/)
@@ -35,13 +35,13 @@ bundle install
 rails s
 ```
 
-##Deployment
+## Deployment
 ```
 git remote add heroku https://git.heroku.com/my-heroku-dyno-restarter.git
 git push heroku
 ```
 
-##Credits
+## Credits
 
 © Artem Vasiliev 2016
 
