@@ -13,7 +13,7 @@ class Dyno
 
   def restart!
     Rails.logger.debug("restarting #{self.inspect}")
-    result = connection.dyno.restart(ENV['APP_NAME'], name)
+    result = connection.dyno.restart(DynoService.target_app_name, name)
     result
   end
 

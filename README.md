@@ -38,10 +38,19 @@ rails s
 ```
 
 ## Deployment
+* Create a my-heroku-dyno-restarter app at Heroku (use whatever app name you like)
+* In your local directory of heroku-dyno-restarter:
 ```
 git remote add heroku https://git.heroku.com/my-heroku-dyno-restarter.git
 git push heroku
 ```
+* Provision the app with necessary addons:
+ * Redis, e.g. Heroku Redis - needed for Sidekiq
+ * [optional] Newrelic - this can be used to set up availability monitoring for my-heroku-dyno-restarter.
+* set up config vars:
+ * TARGET_APP_NAME - the name of Heroku app to restart
+ * RESTART_API_KEY - oauth key to restart target app, as discussed above
+ * RESTART_WEBHOOK_KEY - some random key that you will need to be used in a trigger URL as a 'key' parameter - see above
 
 ## Credits
 

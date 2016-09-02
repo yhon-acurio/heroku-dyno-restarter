@@ -31,6 +31,6 @@ class DynoService
   end
 
   def self.target_app_name
-    ENV['APP_NAME']
+    ENV['TARGET_APP_NAME']
   end
 end
