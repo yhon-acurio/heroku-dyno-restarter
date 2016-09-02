@@ -1,3 +1,5 @@
+[![Dependency Status](https://gemnasium.com/badges/github.com/artemv/heroku-dyno-restarter.svg)](https://gemnasium.com/github.com/artemv/heroku-dyno-restarter)
+
 ## What is it
 A simple microservice app that can restart dynos of given Heroku application. Expected usage is this:
 
