@@ -14,7 +14,7 @@ class DynoService
 
   def dynos
     result = connection.dyno.list(target_app_name).map do |dyno_info|
-      Dyno.new(dyno_info, self) if dyno_info['type'] == @kind
+      Dyno.new(dyno_info, self) if dyno_info['type'] == @kind || @kind == 'all'
     end.compact
     Rails.logger.debug("DynoService dynos: #{result.inspect}")
     result
