@@ -53,6 +53,9 @@ git push heroku
  * RESTART_API_KEY - oauth key to restart target app, as discussed above
  * RESTART_WEBHOOK_KEY - some random key that you will need to be used in a trigger URL as a 'key' parameter - see above
 * switch on the worker dyno of the my-heroku-dyno-restarter app
+* `curl https://my-heroku-dyno-restarter.herokuapp.com/api/monitor` to check tht the app is alive. You can also use 
+this URL for availability monitoring via [NewRelic](https://newrelic.com/) or [Uptime Robot](https://uptimerobot.com/)
+ 
 You're all set!
 
 ## Credits
