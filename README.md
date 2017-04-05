@@ -10,7 +10,7 @@ A simple microservice RailsAPI app that can restart dynos of given Heroku applic
 to restart it. 'kind' parameter here must match the process kind key at target app's Procfile, default is 'worker'.
 
 This is implemented as a separate service to be alive when the target app feels bad and e.g. its Sidekiq queue stucks
-for some reason.
+for some reason, or Heroku have its occasional [H10 errors](https://status.heroku.com/incidents/1090).
 
 ## Target app access key
 This app needs Heroku OAuth key to be able to restart target app, this is set via RESTART_API_KEY env var.
