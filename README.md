@@ -4,7 +4,7 @@
 ## What is it
 A simple microservice RailsAPI app that can restart dynos of given Heroku application. Expected usage is this:
 
-* set up a webhook for target application via Heroku logging plugin like Papertrail.
+* set up a webhook for target application via Heroku logging plugin like Logentries or Papertrail.
 * This webhook should be run when the target app notices that sidekiq has stuck, and POST to
 `https://my-heroku-dyno-restarter.herokuapp.com/api/restart?key=restart-webhook-key&kind=web`
 to restart it. 'key' parameter value must match RESTART_WEBHOOK_KEY var you configure for the service, see below. 
