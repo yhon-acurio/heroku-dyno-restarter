@@ -29,7 +29,7 @@ See also .env.example for other configuration keys.
 
 * Clone the master repo: `git clone https://github.com/artemv/heroku-dyno-restarter.git && cd heroku-dyno-restarter`
 * Copy .env.example file to .env and change values as appropriate for your local env
-* Install Ruby 2.3.1 from https://www.ruby-lang.org/en/downloads/ or via RVM (https://rvm.io/)
+* Install Ruby 2.5.1 from https://www.ruby-lang.org/en/downloads/ or via RVM (https://rvm.io/)
 * Install Bundler and dependencies:
 ```
 gem install bundler
